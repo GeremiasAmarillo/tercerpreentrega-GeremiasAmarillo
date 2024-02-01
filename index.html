@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de juegos online</title>
+    <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!--toastify-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+
+</head>
+
+<body>
+    <header class="d-flex justify-content-around p-4">
+        <img src="img/favicon.ico" alt="LogoEmpresa">
+        <h1 class="text-ligth">Venta Juegos Online</h1>
+        <button id="btnModalCarrito" type="button" class="btn btn-custom">
+            <img src="img/icons8-carrito-de-compras-50.png" alt="">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartCount" class="badge text-bg-custom">0</span>
+        </button>
+    </header>
+    <main class="container mt-2">
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <input id="inputSearch" type="search" class="form-control" placeholder="Buscar...">
+            </div>
+            <hr>
+            <div class="col-md-8">
+                <button id="btnOrder" type="button" class="btn btn-warning ">
+                    <i class="fa-solid fa-arrow-down-1-9"></i>Odenar A-Z </button>
+            </div>
+            <hr>
+            <div class="col-md-8">
+                <button id="btnOrderPrice" type="button" class="btn btn-warning">
+                    <i class="fa-solid fa-arrow-down-1-9"></i>Ordenar por Precio</button>
+            </div>
+
+        </div>
+        <div id="listProducts" class="row mt-2">
+
+
+        </div>
+    </main>
+
+    <div id="modalCarrito" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fa-solid fa-cart-shopping"></i> Carrito </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Producto:</th>
+                                <th>Cantidad:</th>
+                                <th>Precio (Moneda Uruguaya): </th>
+                                <th>Total:</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="modalListProducts">
+
+                        </tbody>
+
+                    </table>
+                    <hr>
+                    <p class="text-danger"> Su total es de: $ <span id="cartSum"> </span> (Uruguayos)</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnClose" type="button" class="btn btn-secondary">Cerrar</button>
+                    <button id="btnSave" type="submit" class="btn btn-primary">Comprar</button>
+                    <button id="btnClearCart" type="button" class="btn btn-danger">Borrar Carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/" target="_blank" class="social-icon"><img class="imgsocial"
+                    src="/img/fa-facebook-square_256_0_656565_none.png" alt="Facebook"></a>
+            <a href="https://twitter.com/" target="_blank" class="social-icon"><img class="imgsocial" src="img/Twitter.png"
+                    alt="Twitter"></a>
+            <a href="https://www.instagram.com/" target="_blank" class="social-icon"><img class="imgsocial"
+                    src="/img/fa-instagram.png" alt="Instagram"></a>
+        </div>
+        <p class="copy">© 2024 VentaJuegosOnline. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/datos.js" defer></script>
+    <script src="js/cards.js" defer></script>
+    <script src="js/app.js" defer></script>
+
+</body>
+
+</html>
